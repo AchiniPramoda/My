@@ -1,0 +1,174 @@
+@import './break-points';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Acme&family=Anek+Bangla&display=swap');
+
+// @font-face {
+//   font-family: 'go-bold';
+//   src: url('/static/fonts/Gobold-Regular.otf');
+// }
+// @font-face {
+//   font-family: "go-bold";
+//   src: url("/static/fonts/Gobold-Bold.otf");
+// }
+
+%heading {
+  // font-family: 'go-bold', sans-serif;
+  font-family: 'Barlow', sans-serif;
+  font-weight: regular;
+  line-height: 150%;
+}
+
+%desc {
+  font-family: 'Barlow', sans-serif;
+}
+
+// .font-family-acme {
+//   font-family: 'Acme', sans-serif;
+// }
+// .font-family-Anek-Bangla {
+//   font-family: 'Anek Bangla', sans-serif;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %desc;
+}
+
+.ts-heading-font {
+  @extend %heading;
+}
+%heading-1x2 {
+  font-size: clamp(4rem, 12.5vw, 9.625rem) !important; // 154px
+}
+%heading-1 {
+  font-size: clamp(2.75rem, 9vw, 5rem) !important; // 82px
+}
+%heading-2 {
+  font-size: clamp(1.75rem, 4.5vw, 3.75rem) !important; // 60px
+}
+%heading-3 {
+  font-size: clamp(1.75rem, 4.3vw, 2.75rem) !important; // 44px
+}
+%heading-4 {
+  font-size: clamp(1rem, 4.2vw, 2rem) !important; // 32px
+  @include lg-up {
+    font-size: clamp(1rem, 4.2vw, 1.7rem) !important; // 32px
+  }
+  @include xl-up {
+    font-size: clamp(1rem, 4.2vw, 2rem) !important; // 32px
+  }
+}
+%heading-5 {
+  font-size: clamp(1rem, 4vw, 1.5rem) !important; // 24px
+}
+%heading-6 {
+  font-size: clamp(1rem, 3vw, 1.125rem) !important; //20px
+}
+
+h1 {
+  @extend %heading-1;
+}
+h2 {
+  @extend %heading-2;
+}
+h3 {
+  @extend %heading-3;
+}
+h4 {
+  @extend %heading-4;
+}
+h5 {
+  @extend %heading-5;
+}
+h6 {
+  @extend %heading-6;
+}
+
+.ts-heading {
+  &-1x2 {
+    @extend %heading;
+    @extend %heading-1x2;
+  }
+  &-1 {
+    @extend %heading;
+    @extend %heading-1;
+  }
+  &-2 {
+    @extend %heading;
+    @extend %heading-2;
+  }
+  &-3 {
+    @extend %heading;
+    @extend %heading-3;
+  }
+  &-4 {
+    @extend %heading;
+    @extend %heading-4;
+  }
+  &-5 {
+    @extend %heading;
+    @extend %heading-5;
+  }
+  &-6 {
+    @extend %heading;
+    @extend %heading-6;
+  }
+}
+
+.normal-font-family {
+  font-family: 'Barlow', sans-serif !important;
+}
+%desc-xl {
+  @extend %desc;
+  font-size: clamp(1.25rem, 3vw, 1.5rem); // 24px
+}
+%desc-lg {
+  @extend %desc;
+  font-size: clamp(1.125rem, 3vw, 1.25rem); // 20px
+}
+%desc-md {
+  @extend %desc;
+  font-size: clamp(1rem, 2.4vw, 1.125rem); //18px
+}
+%desc-sm {
+  @extend %desc;
+  font-size: clamp(0.875rem, 2.2vw, 0.875rem); // 14px
+}
+
+.ts-desc {
+  @extend %desc;
+  &-xl {
+    @extend %desc-xl;
+  }
+  &-lg {
+    @extend %desc-lg;
+  }
+  &-md {
+    @extend %desc-md;
+  }
+  &-sm {
+    @extend %desc-sm;
+  }
+}
+
+.fw {
+  &-medium {
+    font-weight: 500;
+  }
+  &-semibold {
+    font-weight: 600;
+  }
+}
+
+.line-height-120 {
+  line-height: 120%;
+}
+// extra
+
+.ts-heading-3-sm {
+  font-size: clamp(1.25rem, 5vw, 2.75rem);
+}

@@ -1,0 +1,30 @@
+.tsVault {
+  width: 100%;
+  height: 758px;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  &TextContainer {
+    max-width: 1550px;
+    margin-inline: auto;
+  }
+    &Text {
+      max-width: 510px;
+
+    // margin-bottom: minmax(10vw, 109px);
+    // margin-bottom: 109px;
+    margin-bottom: clamp(55px, 7.5vw, 109px);
+  }
+
+  @media (min-width: 576px) {
+    background-image: url("/static/images/vault_bg.jpg");
+  }
+  @media (max-width: 575px) {
+    background-image: url("/static/images/vault_bg_sm.jpg");
+    height: 690px;
+  }
+}

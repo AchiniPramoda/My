@@ -1,0 +1,162 @@
+@import './custom-bootstrap';
+@import '~bootstrap/scss/bootstrap';
+@import './overwrite-bootstrap';
+@import './scrollbar';
+@import './color';
+@import './utilities';
+@import './spacing';
+@import './sizing';
+@import './typography';
+@import './footer';
+@import './common';
+@import './components.module';
+@import './navbar.module';
+
+// Pages
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  background-color: #0a0e1b;
+  color: $white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    // background: black;
+
+    // background: linear-gradient(225deg, #330d3a 0%, #033a4a 100%);
+  }
+}
+
+.ts-building-software-header {
+  padding-block: 3.875rem;
+  background: linear-gradient(90deg, #00aa96 1.4%, #9756bc 100%);
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.rounded-03 {
+  border-radius: 0.75rem;
+}
+
+.ts-hero-wrapper {
+  padding-top: clamp(120px, 15vw, 150px);
+}
+
+.ts-main-wrapper {
+  padding-top: clamp(120px, 13vw, 130px);
+}
+
+.ts-input-outline-white {
+  &::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: white;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+  }
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+  }
+
+  &::placeholder {
+    /* Most modern browsers support this now. */
+    color: white;
+  }
+}
+
+.ts-select-outline-white {
+  border: 1px solid white;
+  background-color: transparent;
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+  &:focus {
+    outline: none;
+    border-color: white;
+  }
+
+  option {
+    color: black;
+  }
+}
+
+.ts-custom-tabs {
+  border: 1px solid white;
+
+  .show > .nav-link,
+  .nav-link.active {
+    color: white;
+    background: $skyblue-gradient !important;
+  }
+}
+
+// Table
+
+.ts-table {
+  color: white;
+  font-size: clamp(1rem, 3.5vw, 1.25rem) !important; //20px
+  tr,
+  td {
+    color: white !important;
+  }
+  thead {
+    th {
+      padding-block: 1.75rem;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        padding-block: 0.625rem !important;
+      }
+      &:hover {
+        background: rgba(255, 255, 255, 0.07);
+        color: white;
+      }
+    }
+  }
+}
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 !important;
+}
+
+// .table-responsive{
+
+// }
+
+// .table-striped > tbody > tr:nth-of-type(odd) > * {
+//   --bs-table-accent-bg: rgba(255, 255, 255, 0.1);
+//   color: white;
+// }

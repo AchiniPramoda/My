@@ -1,0 +1,319 @@
+/* make the customizations */
+// $theme-colors: (
+//   "primary": linear-gradient(90deg, #1B4561 0%, #411A57 100%),
+//   "info": tomato,
+//   "danger": teal,
+// );
+
+@import 'color';
+
+.container-fluid {
+  max-width: 1900px !important;
+}
+
+* {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+.btn {
+  border-radius: 0.5rem;
+  &-primary {
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    background: $primary-gradient;
+    &-outline {
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: white !important;
+    }
+  }
+
+  &-secondary {
+    border: none !important;
+    background: linear-gradient(90deg, #7aa8e4 0%, #3667b7 101.44%);
+    &:hover {
+      background: linear-gradient(90deg, #4680cc 0%, #0a3b8a 101.44%);
+    }
+  }
+
+  &-orange {
+    color: white;
+    border: none !important;
+    background: linear-gradient(90deg, #5f4006 0%, #917619 100%);
+    &-outline {
+      border: 2px solid #917619 !important;
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, #917619 0%, #5f4006 100%);
+    }
+  }
+  &-filter {
+    color: white !important;
+    border: 1px solid $blue-dark-color !important;
+    background-color: rgba(122, 168, 228, 0.3) !important;
+  }
+  &-card {
+    color: white !important;
+    background: linear-gradient(90deg, #491454 0%, #204f63 100%);
+    border-radius: 4px;
+  }
+  &-kapler {
+    background: linear-gradient(220.08deg, #58c0e0 7.24%, #2d52e4 100%);
+    border-radius: 4px;
+    padding: 0px 12px;
+    border: none;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  &-white-transparent {
+    color: rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    &:hover {
+      background: rgba(255, 255, 255, 0.4) !important;
+    }
+  }
+  &-pinkish-red {
+    color: $pinkish-red-color !important;
+    background: rgba(210, 59, 117, 0.23) !important;
+    &:hover {
+      background: rgba(210, 59, 117, 0.4) !important;
+    }
+  }
+  &-success {
+    color: rgb(99, 216, 136) !important;
+    background: rgba(99, 216, 136, 0.25) !important;
+    &:hover {
+      background: rgba(99, 216, 136, 0.4) !important;
+    }
+  }
+
+  &-secondary-2 {
+    color: white !important;
+    border: none !important;
+    background: rgb(26, 90, 104);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(26, 90, 104, 1) 0%,
+      rgba(8, 211, 199, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(26, 90, 104, 1) 0%,
+      rgba(8, 211, 199, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(26, 90, 104, 1) 0%,
+      rgba(8, 211, 199, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a5a68",endColorstr="#08d3c7",GradientType=1);
+    &:hover {
+      background: linear-gradient(90deg, #08d3c7 0%, #1a5a68 100%);
+    }
+  }
+
+  &-outline {
+    &-white {
+      color: white;
+      border: 1px solid #fff !important;
+
+      &:hover {
+        color: #7aa8e4 !important;
+        background-color: white !important;
+      }
+    }
+
+    &-skyblue {
+      border: 1px solid #7aa8e4 !important;
+      span {
+        background: $skyblue-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      //     &:hover{
+      //     background: $skyblue-gradient;
+      //  span{
+
+      //    color:white !important;
+      //   }
+      //   }
+      &:hover {
+        background: linear-gradient(90deg, #7aa8e4 0%, #3667b7 101.44%);
+        span {
+          color: white;
+          -webkit-text-fill-color: white;
+          text-fill-color: white;
+        }
+      }
+    }
+    &-secondary {
+      color: white !important;
+      border: 1px solid rgba(52, 119, 148, 0.85) !important;
+      background: transparent !important;
+      &:hover {
+        background: linear-gradient(
+          90deg,
+          #7aa8e4 0%,
+          #3667b7 101.44%
+        ) !important;
+      }
+    }
+  }
+
+  &-side-menu {
+    padding: 4px 8px !important;
+    &:hover {
+      background-color: $blue-light-color !important;
+    }
+  }
+}
+
+.btn,
+.form-control {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.ts-form-control-2 {
+  background-color: #347794 !important;
+  color: white !important;
+  border-color: #347794 !important;
+
+  /* do not group these rules */
+  &::-webkit-input-placeholder {
+    color: white !important;
+  }
+  &:-moz-placeholder {
+    /* FF 4-18 */
+    color: white !important;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    /* FF 19+ */
+    color: white !important;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white !important;
+  }
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white !important;
+  }
+  &::placeholder {
+    /* modern browser */
+    color: white !important;
+  }
+}
+
+.sticky-top--negative-navbar {
+  top: 80px !important;
+}
+
+.mw-100 {
+  max-width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.h-auto {
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .w-md-down-100 {
+    width: 100%;
+  }
+}
+
+.modal {
+  $self: &;
+
+  &-content {
+    background-color: $dark-blue-color !important;
+    border-radius: 1rem !important;
+    overflow: hidden;
+  }
+  &-body {
+    max-height: 500px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 12px; /* width of the entire scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+      background: $dark-blue-color; /* color of the tracking area */
+      border: 1px solid $blue-light-color; /* roundness of the scroll thumb */
+      border-radius: 6px; /* roundness of the scroll thumb */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $blue-light-color; /* color of the scroll thumb */
+      border-radius: 6px; /* roundness of the scroll thumb */
+    }
+  }
+
+  &--orange {
+    #{ $self }-content {
+      background-color: $black !important;
+      border: 3px solid $orange-color;
+    }
+    #{ $self }-body {
+      margin-inline: 1rem;
+      &::-webkit-scrollbar {
+        width: 12px; /* width of the entire scrollbar */
+        height: 100px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $black; /* color of the tracking area */
+        border: 1px solid $orange-color; /* roundness of the scroll thumb */
+        border-radius: 6px; /* roundness of the scroll thumb */
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $orange-color; /* color of the scroll thumb */
+        border-radius: 6px; /* roundness of the scroll thumb */
+      }
+    }
+  }
+}
+
+.ts-error-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.form-switch .form-check-input {
+  background-color: #347794;
+  border-color: #347794;
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+}
+.form-switch .form-check-input:checked {
+  background-color: #347794;
+  border-color: #347794;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.form-check-input {
+  width: 3rem !important;
+  height: 1.4rem !important;
+}
+
+.border-white-25 {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}

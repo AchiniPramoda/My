@@ -1,0 +1,285 @@
+@import './color';
+@import './break-points';
+@import './spacing';
+@import './typography';
+@import './scrollbar';
+
+// component customizations
+
+.ts-hero-cards {
+  @media (min-width: 1200px) {
+    gap: 2rem;
+  }
+  @media (min-width: 1101px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  @media (max-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @media (max-width: 575px) {
+    gap: 0.5rem;
+  }
+}
+
+.ts-card-skyblue-outline {
+  border-radius: clamp(.5rem, 2vw, 1.875rem);
+  border: 2px solid rgba(122, 168, 228, 1);
+  padding-block: 0.5rem;
+  margin:0;
+  @media (min-width: 1101px) {
+    padding-block: 1.125rem 1.25rem;
+    min-width: 14.25rem;
+  }
+}
+.ts-searchbar {
+  position: relative;
+  .form-control {
+    border-radius: 50rem;
+    background: linear-gradient(90deg, #491454 0%, #204f63 100%);
+    border: none;
+    color: white;
+    &::placeholder {
+      color: #ffffff8c;
+    }
+  }
+  .btn-search {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+  }
+
+  &__sky-blue {
+    .form-control {
+      &::placeholder {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.ts-transparent-select {
+  background-color: transparent;
+  border: none;
+  color: white;
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+  option {
+    background-color: rgba(122, 168, 228, 1);
+  }
+  &::placeholder {
+    color: white;
+    opacity: 1;
+  }
+}
+.ts-skyblue-select {
+  border: none;
+  color: white;
+  display: flex;
+  gap: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8.16667L7 5.5V13.5' stroke='white' stroke-width='2'/%3E%3Cpath d='M14 10.8333L11 13.5V5.5' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 18px 16px;
+  background-color: rgba(122, 168, 228, 1);
+  option {
+    background-color: rgba(122, 168, 228, 1);
+  }
+  &::placeholder {
+    color: white;
+    opacity: 1;
+  }
+}
+.table-responsive {
+  @include ts-scrollbar-primary--small;
+}
+// .progress {
+//   $self: &; // This is important.
+//   border-radius: 50rem;
+//   border: 2px solid $blue-light-color;
+//   height: 27px;
+//   background-color: transparent;
+
+//   &-bar {
+//     background: $skyblue-gradient;
+//   }
+
+//   &--sm {
+//     height: 14px;
+//   }
+//   &--red {
+//     border: none;
+//     background-color: $white;
+//     #{ $self }-bar {
+//       background: $red-gradient;
+//     }
+//   }
+//   &--white {
+//     border: none;
+//     background-color: rgba(255, 255, 255, 0.2);
+//     #{ $self }-bar {
+//       background: $white;
+//     }
+//   }
+// }
+
+// .ts-progress--primary-2 {
+//   background-color: white !important;
+//   border: none;
+//   .progress-bar {
+//     background: $primary-gradient-2;
+//     border-radius: 50rem;
+//   }
+// }
+
+// .ts-search-group {
+//   position: relative;
+//   .form-control {
+//     background: $skyblue-gradient;
+//     border: none;
+//     color: white;
+//     &::placeholder {
+//       /* Chrome, Firefox, Opera, Safari 10.1+ */
+//       color: white;
+//       opacity: 1; /* Firefox */
+//     }
+
+//     &:-ms-input-placeholder {
+//       /* Internet Explorer 10-11 */
+//       color: white;
+//     }
+
+//     &::-ms-input-placeholder {
+//       /* Microsoft Edge */
+//       color: white;
+//     }
+//   }
+//   &__btn {
+//     position: absolute;
+//     right: 1rem;
+//     top: 50%;
+//     transform: translateY(calc(-50% - 1px));
+//   }
+// }
+
+// .tag {
+//   background-color: #4b1254;
+//   color: #c930e0;
+//   border-radius: 3px;
+//   padding: 2px 4px;
+// }
+
+// .ts-wallet-page {
+//   .ts-nft-card {
+//     height: 100%;
+
+//     &__header {
+//       height: 242px !important;
+//       overflow: hidden !important;
+//       width: 100% !important;
+//     }
+
+//     &__img,
+//     video {
+//       width: 100% !important;
+//       height: 100% !important;
+//       object-fit: cover !important;
+//     }
+//   }
+// }
+
+// .ts-switch-selector {
+//   $self: &;
+//   display: flex;
+//   // border: 2px solid $blue-dark-color;
+
+//   border: 2px solid #7aa8e4 !important;
+//   // border: 2px solid 7aa8e4 !important;
+//   padding: 0;
+//   border-radius: 50rem;
+//   // overflow: hidden;
+//   flex-direction: row;
+//   background: linear-gradient(90deg, #041420 0%, #200630 100%);
+//   &--transparent {
+//     background: transparent;
+//   }
+
+//   @media (max-width: 575px) {
+//     width: 100%;
+//     display: grid;
+//     grid-template-columns: repeat(3, auto);
+//   }
+//   &__element {
+//     // background-color: rgb(247, 0, 0);
+//     border: none;
+//     background: transparent;
+//     border-radius: 50rem;
+//     padding: 10px 6px;
+//     font-size: 13px;
+//     @media (min-width: 575px) {
+//       padding: 10px 18px;
+//       font-size: 1rem;
+//     }
+//   }
+//   .active {
+//     background: $skyblue-gradient !important;
+//   }
+
+//   &--sm {
+//     background: transparent;
+//     #{$self}__element {
+//       padding-block: 6px;
+//     }
+//   }
+//   // @media (max-width: 575px) {
+//   //   flex-direction: column;
+//   //   border-radius: 1.5625rem;
+//   //   width: 100%;
+//   // }
+// }
+
+// /* ENDLESS ROTATE */
+// .rotate {
+//   animation: rotate 1.5s linear infinite;
+// }
+// @keyframes rotate {
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// /* SPINNER JUST FOR DEMO */
+// .spinner {
+//   display: inline-block;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   box-shadow: inset -2px 0 0 2px #0bf;
+// }
+
+// .ts-select-secondary {
+//   position: relative;
+//   color: white;
+//   // background: linear-gradient(180deg, #7AA8E4 0%, #3667B7 100%);
+//   background-color: #7aa8e4;
+//   border: none;
+
+//   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+//   background-position: right 0.75rem 1rem;
+//   // &::after{
+//   //   content:"";
+//   //   position: absolute;
+//   //   top: 50%;
+//   //   right: 0;
+//   //   width: 25px;
+//   //   height:25px;
+//   //   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+//   // z-index: 9999;
+//   // }
+// }

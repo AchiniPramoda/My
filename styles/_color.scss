@@ -1,0 +1,116 @@
+$white: #fff;
+$black: #000;
+$primary-color: #491454;
+$secondary-color: #204f62;
+$blue-light-color: #7aa8e4;
+$blue-darkest-color: #1d1532;
+$blue-dark-color: #3667b7;
+$orange-color: #c95008;
+$rose-color: #f03f9c;
+$pinkish-red-color: #d23b75;
+$primary-gradient: linear-gradient(90deg, #1b4561 0%, #411a57 100%);
+$primary-gradient-reverse: linear-gradient(90deg, #204f63 0%, #491454 100%);
+$primary-gradient-2: linear-gradient(90deg, #e865ef 29.17%, #62f1ff 114.58%);
+$skyblue-gradient: linear-gradient(
+  180deg,
+  $blue-light-color 0%,
+  $blue-dark-color 100%
+);
+$red-gradient: linear-gradient(90deg, #660236 0%, #f03f9c 100%);
+$orange-gradient-light: linear-gradient(90deg, #f06e00 0%, #62001c 100%);
+$orange-gradient-light-alternate: linear-gradient(
+  90deg,
+  #62001c 0%,
+  #f06e00 100%
+);
+$orange-gradient-medium: linear-gradient(
+  141.9deg,
+  #f06e00 -36.42%,
+  #62001c 100%
+);
+$orange-gradient-dark: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.78),
+    rgba(0, 0, 0, 0.78)
+  ),
+  linear-gradient(90deg, #f06e00 0%, #62001c 100%);
+$dark-blue-color: #1b0c29;
+
+.text {
+  &-primary {
+    color: $primary-color;
+  }
+  &-secondary {
+    color: $secondary-color;
+  }
+  &-orange {
+    color: $orange-color;
+  }
+  &-rose {
+    color: $rose-color;
+  }
+  &-primary-gradient-light {
+    background: linear-gradient(90deg, #e865ef 29.17%, #62f1ff 114.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &-primary-gradient {
+    background: $primary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &-skyblue-gradient {
+    background: $skyblue-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &-white {
+    &-70 {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+.bg {
+  &-primary {
+    background-color: $primary-color;
+  }
+  &-secondary {
+    background-color: $secondary-color;
+  }
+
+  &-primary-gradient {
+    background: $primary-gradient;
+    &--reverse {
+      background: $primary-gradient-reverse;
+    }
+  }
+  &-skyblue-gradient {
+    background: $skyblue-gradient !important;
+  }
+  &-orange-light-gradient {
+    background: $orange-gradient-light;
+  }
+  &-orange-dark-gradient {
+    background: $orange-gradient-dark;
+  }
+  &-dark-blue {
+    background-color: $dark-blue-color;
+  }
+
+  &-blue-darkest {
+    background-color: $blue-darkest-color !important;
+  }
+  &-white-15 {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.border-white-25 {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}

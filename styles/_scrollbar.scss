@@ -1,0 +1,40 @@
+body {
+  &::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+  }
+  &::-webkit-scrollbar-track {
+    background: rgb(146 146 146); /* color of the tracking area */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #1d1532; /* color of the scroll thumb */
+    border-radius: 6px; /* roundness of the scroll thumb */
+  }
+}
+
+@mixin ts-scrollbar-primary--small {
+  &::-webkit-scrollbar {
+    width: 8px;
+    // height: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #ffffff4d;
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #1d1532;
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #1d1532d3;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px; /* vertical scrollbar width */
+    // height: 30px; /* horizontal scrollbar height */
+    padding-right: 1rem;
+  }
+
+  &::-webkit-scrollbar-button {
+    // height: 30px; /* vertical scrollbar height */
+  }
+}

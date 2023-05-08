@@ -1,0 +1,45 @@
+.ts-footer {
+  // position: relative;
+  padding-block: 56px 75px;
+  background: linear-gradient(225deg, #033a4a 0%, #330d3a 100%);
+  // isolation: isolate;
+
+  // &::before ,
+  // &::after {
+  //   z-index:-1;
+  // }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 330px;
+  //   height: 388px;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-image: url("/static/images/footer-white-owl.png");
+  //   background-size: 330px 388px;
+  //   background-repeat: no-repeat;
+
+  // }
+  @media (max-width: 767px) {
+    padding-block: 60px 48px;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 330px;
+    //   height: 388px;
+    //   left: 0;
+    //   bottom: 0;
+    //   background-image: url("/static/images/footer-white-owl.png");
+    //   background-size: 330px 388px;
+    //   background-repeat: no-repeat;
+    //   transform: matrix(-1, 0, 0, 1, 0, 0);
+    // }
+
+    // &::before,
+    // &::after {
+    //   width: 170px;
+    //   height: 190px;
+    //   background-size: cover;
+    // }
+  }
+}
